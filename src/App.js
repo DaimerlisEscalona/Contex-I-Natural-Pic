@@ -20,9 +20,9 @@ export default function App() {
     const url = `http://localhost:3000/${endpoint}`
     const response = await fetch(url,
       {
-        'mode': 'no-cors',
-	      'headers': {
-          'Access-Control-Allow-Origin': '*',
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + accessToken
         }
       }
     )
