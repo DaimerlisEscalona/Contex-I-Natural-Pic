@@ -20,7 +20,7 @@ export default function App() {
     const url = `http://localhost:3000/${endpoint}`
     const response = await fetch(url,
       {
-        'mode': 'cors',
+        'mode': 'no-cors',
 	      'headers': {
           'Access-Control-Allow-Origin': '*',
         }
