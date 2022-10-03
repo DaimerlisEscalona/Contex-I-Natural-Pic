@@ -18,14 +18,7 @@ export default function App() {
   const consultarJson = async () => {
     const endpoint = "/fotos.json";
     const url = `http://localhost:3000/${endpoint}`
-    const response = await fetch(url,
-      {
-        method: 'GET',
-        headers: {
-          Authorization: 'Bearer ' + accessToken
-        }
-      }
-    )
+    const response = await fetch(url)
     const data = await response.json()
     setFotos(data.photos)
   }
